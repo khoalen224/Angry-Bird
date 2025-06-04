@@ -17,6 +17,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
     private void DrawSlingShot()
     {
-
+        const float test = 0f;
     }
 }
