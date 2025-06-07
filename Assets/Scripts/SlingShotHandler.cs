@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem; // Ensure you have the Input System package installed
 
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class SlingShotHandler : MonoBehaviour
 {
     // Update is called once per frame
     private void Update()
@@ -17,6 +17,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
     private void DrawSlingShot()
     {
-        const float test = 0f;
+
     }
 }
