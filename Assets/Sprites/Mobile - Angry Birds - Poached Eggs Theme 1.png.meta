@@ -129,7 +129,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -184,13 +184,13 @@ TextureImporter:
       name: Sky
       rect:
         serializedVersion: 2
-        x: 48
+        x: 49
         y: 258
-        width: 492
+        width: 491
         height: 310
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 2, w: 4}
+      border: {x: 0, y: 0, z: 3, w: 4}
       customData: 
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
         height: 208
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 2, z: 0, w: 1}
+      border: {x: 4, y: 2, z: 1, w: 1}
       customData: 
       outline: []
       physicsShape: []
@@ -269,28 +269,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees
-      rect:
-        serializedVersion: 2
-        x: 2165
-        y: 254
-        width: 493
-        height: 222
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d3eafb3f3d5d2800800000000000000
-      internalID: 589229652426023892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Soil
       rect:
         serializedVersion: 2
@@ -308,6 +286,28 @@ TextureImporter:
       bones: []
       spriteID: ec498d9848b6d6330800000000000000
       internalID: 3705736285388313806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trees
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 258
+        width: 487
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3de8e58b47cc5d47bae9b13e4728b7a
+      internalID: 4547600114627211622
       vertices: []
       indices: 
       edges: []
@@ -331,7 +331,6 @@ TextureImporter:
       Grass1: -6711174135079827926
       Grass2: 9208671089781706542
       Ground: 1029216951532734836
-      Mobile - Angry Birds - Poached Eggs Theme 1_0: 4547600114627211622
       Mobile - Angry Birds - Poached Eggs Theme 1_1: 1275260282172134726
       Mobile - Angry Birds - Poached Eggs Theme 1_11: 6209649860489825508
       Mobile - Angry Birds - Poached Eggs Theme 1_12: 4253000930385299127
@@ -352,7 +351,7 @@ TextureImporter:
       Sky: 3573923348184751405
       Soil: 3705736285388313806
       Tree-EarlyVers: 402505111128301898
-      Trees: 589229652426023892
+      Trees: 4547600114627211622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

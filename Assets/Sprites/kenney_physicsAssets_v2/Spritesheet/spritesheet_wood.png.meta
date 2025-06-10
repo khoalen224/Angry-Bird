@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_wood_0
+      name: Wooden_Big_Hollow_Box
       rect:
         serializedVersion: 2
-        x: 0
-        y: 13
-        width: 851
-        height: 1011
+        x: 362
+        y: 666
+        width: 138
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 00b9782730bb3fd449d4a3fea2549d3e
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spritesheet_wood_0: -4813528505450680690
+      Wooden_Big_Hollow_Box: -4813528505450680690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
