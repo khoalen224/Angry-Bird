@@ -14,8 +14,12 @@ public class AngryBird : MonoBehaviour
         _rb.isKinematic = true;
         _circleCollider.enabled = false;
     }
-    public void LaunchBird()
+    public void LaunchBird(Vector2 direction, float force)
     {
+        _rb.isKinematic = false;
+        _circleCollider.enabled = true;
 
+        //apply force
+        _rb.AddForce(direction * force, ForceMode2D.Impulse);
     }
 }
