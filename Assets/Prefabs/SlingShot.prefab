@@ -89,8 +89,10 @@ MonoBehaviour:
   rightStartPosition: {fileID: 7716767310125958471}
   centerPosition: {fileID: 8716281626976951313}
   idlePosition: {fileID: 674963992198920194}
-  maxDistance: 7.5
+  maxDistance: 2.5
   slingShotArea: {fileID: 2423133048696045567}
+  angryBirdPrefab: {fileID: 7575828536687891072, guid: 7540dde7ca5d86c48a83f1ba46ed237a, type: 3}
+  angryBirdOffset: 0.06
 --- !u!1 &3537065579582657064
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 3537065579582657064}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.6, y: -4.38, z: 0}
+  m_LocalPosition: {x: -7.49, y: -5.973, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -149,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 4263614021780114996}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.81, y: -4.8, z: 0}
+  m_LocalPosition: {x: -7.33, y: -7.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -185,12 +187,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.81124735, y: 0.9464936}
-  m_Radius: 2.6047335
+  m_Offset: {x: 0.09053993, y: 0.9464936}
+  m_Radius: 1.884026
 --- !u!114 &2423133048696045567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +233,7 @@ Transform:
   m_GameObject: {fileID: 4528377826222705154}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.75, y: -4.42, z: 0}
+  m_LocalPosition: {x: -7.052, y: -5.955, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -262,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 4646703503790991520}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.25, y: -4.55, z: 0}
+  m_LocalPosition: {x: -7.251, y: -5.962, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -293,8 +295,8 @@ Transform:
   m_GameObject: {fileID: 5379245769841367034}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -1.68, y: -3.76, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8039243065969870631}
@@ -414,7 +416,7 @@ Transform:
   m_GameObject: {fileID: 5782303237274847939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.81, y: -4.46, z: 0}
+  m_LocalPosition: {x: -7.1, y: -6.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -475,8 +477,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.004452427
-        value: 0.5247059
+        time: 0.005375743
+        value: 0.2500045
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -484,8 +486,17 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4882588
-        value: 0.62
+        time: 0.5073705
+        value: 0.32814896
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.99394226
+        value: 0.32559326
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -595,7 +606,7 @@ Transform:
   m_GameObject: {fileID: 6304901611720588889}
   serializedVersion: 2
   m_LocalRotation: {x: -0.007068574, y: 0, z: 0, w: 0.999975}
-  m_LocalPosition: {x: -11.67, y: -4.44, z: 0.04}
+  m_LocalPosition: {x: -7.59, y: -6.08, z: 0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -656,8 +667,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.004452427
-        value: 0.5247059
+        time: 0.005375743
+        value: 0.2500045
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -665,8 +676,17 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4882588
-        value: 0.62
+        time: 0.5073705
+        value: 0.32814896
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.99394226
+        value: 0.32559326
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -742,7 +762,7 @@ Transform:
   m_GameObject: {fileID: 6460271490276216397}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.23, y: -5.23, z: 0}
+  m_LocalPosition: {x: -7.251, y: -5.962, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
