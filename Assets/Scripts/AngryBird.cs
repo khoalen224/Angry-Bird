@@ -11,12 +11,12 @@ public class AngryBird : MonoBehaviour
     }
     public void Start()
     {
-        _rb.isKinematic = true;
+        _rb.bodyType = RigidbodyType2D.Kinematic;
         _circleCollider.enabled = false;
     }
     public void LaunchBird(Vector2 direction, float force)
     {
-        _rb.isKinematic = false;
+        _rb.bodyType = RigidbodyType2D.Dynamic;
         _circleCollider.enabled = true;
 
         //apply force
