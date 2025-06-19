@@ -18,12 +18,13 @@ public class SlingShotHandler : MonoBehaviour
 
     [Header("Sling Shot Stats")]
     [SerializeField] private float maxDistance = 2.5f;
+    [SerializeField] private float shotForce = 5f;
 
     [Header("Scripts")]
     [SerializeField] private SlingShotArea slingShotArea;
 
     [Header("Bird")]
-    [SerializeField] private GameObject angryBirdPrefab;
+    [SerializeField] private AngryBird angryBirdPrefab;
     [SerializeField] private float angryBirdOffset = 0.06f; 
 
     private Vector2 slingShotLinesPosition;
@@ -32,7 +33,7 @@ public class SlingShotHandler : MonoBehaviour
 
 
     private bool clickWithinThisArea;
-    private GameObject spawnedAngryBird;
+    private AngryBird spawnedAngryBird;
 
     public void Awake()
     {
@@ -55,11 +56,12 @@ public class SlingShotHandler : MonoBehaviour
         {
             // will run
             DrawSlingShot();
-            PostioningTheAngryBird();
+            UpdateAngryBirdPosition();
         }
         if(Mouse.current.leftButton.wasReleasedThisFrame)
         {
             clickWithinThisArea = false;
+            spawnedAngryBird.LaunchBird(direction, shotForce);
         }
     }
 
@@ -73,7 +75,7 @@ public class SlingShotHandler : MonoBehaviour
         spawnedAngryBird = Instantiate(angryBirdPrefab, spawnPos, Quaternion.identity);
         spawnedAngryBird.transform.right = direction;
     }
-    private void PostioningTheAngryBird()
+    private void UpdateAngryBirdPosition()
     {
         spawnedAngryBird.transform.position = slingShotLinesPosition+ directionNormalized* angryBirdOffset ;
         spawnedAngryBird.transform.right = directionNormalized;

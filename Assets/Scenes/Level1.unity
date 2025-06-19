@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7036329331210462925, guid: b4ce360eceb9ba2428998744ef6bab12, type: 3}
+      propertyPath: angryBirdPrefab
+      value: 
+      objectReference: {fileID: -8270123052804812254, guid: 7540dde7ca5d86c48a83f1ba46ed237a, type: 3}
     - target: {fileID: 7716767310125958471, guid: b4ce360eceb9ba2428998744ef6bab12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.078
