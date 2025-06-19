@@ -36,7 +36,7 @@ public class AngryBird : MonoBehaviour
         hasLaunched = true;
         shouldFaceVelDirection = true;
     }
-    private void onCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         shouldFaceVelDirection = false;
     }
