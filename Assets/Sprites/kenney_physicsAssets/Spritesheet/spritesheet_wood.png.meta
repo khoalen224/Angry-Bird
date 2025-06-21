@@ -100,15 +100,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_wood_0
+      name: Wood-BarDense0_damaged
       rect:
         serializedVersion: 2
         x: 0
-        y: 13
-        width: 851
-        height: 1011
+        y: 952
+        width: 219
+        height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -121,11 +121,187 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Wood-BarDense0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 883
+        width: 219
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da97d38f11418d54bbba46b70f664726
+      internalID: 660827799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-BoxHollow1_damaged
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 745
+        width: 219
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7a1801e3351914eba3c0785f38ed8d
+      internalID: 909632452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-BarDense0_slightlyDamaged
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 219
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f02180b2ef21a84eac305cf6daf50cb
+      internalID: -573663345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-BoxDense1_damaged
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 534
+        width: 219
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c547362be4b51f4682e84bdf1a3a241
+      internalID: 1622400095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-BoxHollow1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 395
+        width: 219
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889b3f96090875149acf177fce97bb5f
+      internalID: 32919185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-BoxDense1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 219
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6f3c764a7fd424a87810663b36c4d0
+      internalID: 2051691189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-BoxHollow
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 955
+        width: 220
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83dabacff3362b4c8de9335b334b6ab
+      internalID: 2092486455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-TriangleDense0
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 234
+        width: 141
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898b9558967989e4fb3f6b79f46807d7
+      internalID: -745948043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cccce915997074145a2f0bc3982014b2
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +311,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spritesheet_wood_0: -4813528505450680690
+      1: -4813528505450680690
+      Wood-BarDense0: 660827799
+      Wood-BarDense0_damaged: -4813528505450680690
+      Wood-BarDense0_slightlyDamaged: -573663345
+      Wood-BoxDense1: 2051691189
+      Wood-BoxDense1_damaged: 1622400095
+      Wood-BoxHollow: 2092486455
+      Wood-BoxHollow1: 32919185
+      Wood-BoxHollow1_damaged: 909632452
+      Wood-TriangleDense0: -745948043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

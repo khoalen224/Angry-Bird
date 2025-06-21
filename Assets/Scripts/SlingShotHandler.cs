@@ -18,7 +18,8 @@ public class SlingShotHandler : MonoBehaviour
 
     [Header("Sling Shot Stats")]
     [SerializeField] private float maxDistance = 2.5f;
-    [SerializeField] private float shotForce = 5f;
+    [SerializeField] private float shotForce = 10f;
+    [SerializeField] private float birdLaunchDelay = 2f;
 
     [Header("Scripts")]
     [SerializeField] private SlingShotArea slingShotArea;
@@ -34,6 +35,7 @@ public class SlingShotHandler : MonoBehaviour
 
     private bool clickWithinThisArea;
     private AngryBird spawnedAngryBird;
+    private bool birdOnSlingShot = true;
 
     public void Awake()
     {
@@ -52,20 +54,32 @@ public class SlingShotHandler : MonoBehaviour
            //this
            clickWithinThisArea = true;
         }
-        if (Mouse.current.leftButton.isPressed && clickWithinThisArea)
+        if (Mouse.current.leftButton.isPressed && clickWithinThisArea && birdOnSlingShot)
         {
             // will run
             DrawSlingShot();
             UpdateAngryBirdPosition();
         }
-        if(Mouse.current.leftButton.wasReleasedThisFrame)
+        if(Mouse.current.leftButton.wasReleasedThisFrame && birdOnSlingShot)
         {
-            clickWithinThisArea = false;
-            spawnedAngryBird.LaunchBird(direction, shotForce);
+            if (GameManager.Instance.HasEnoughBirds())
+            {
+                clickWithinThisArea = false;
+                birdOnSlingShot = false;
+
+                spawnedAngryBird.LaunchBird(direction, shotForce);
+                GameManager.Instance.UseBird();
+                SetLine(centerPosition.position);
+
+                if(GameManager.Instance.HasEnoughBirds())
+                {
+                    StartCoroutine(SpawingAngryBirdAfter());
+                }
+            }
         }
     }
 
-    #region AngryBridLaunch()
+    #region AngryBirdLaunch()
     public void SpawnAngryBird()
     {
         Vector2 direction = (centerPosition.position - idlePosition.position).normalized;
@@ -74,11 +88,20 @@ public class SlingShotHandler : MonoBehaviour
 
         spawnedAngryBird = Instantiate(angryBirdPrefab, spawnPos, Quaternion.identity);
         spawnedAngryBird.transform.right = direction;
+
+        birdOnSlingShot = true;
     }
     private void UpdateAngryBirdPosition()
     {
         spawnedAngryBird.transform.position = slingShotLinesPosition+ directionNormalized* angryBirdOffset ;
         spawnedAngryBird.transform.right = directionNormalized;
+    }
+
+    private IEnumerator SpawingAngryBirdAfter()
+    {
+        yield return new WaitForSeconds(birdLaunchDelay);
+        SpawnAngryBird();
+
     }
 
     #endregion

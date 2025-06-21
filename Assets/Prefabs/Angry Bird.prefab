@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7575828536687891072}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.93, y: -2.65, z: 0}
+  m_LocalPosition: {x: -6.998, y: -2.615, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106,14 +106,14 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: a342df4e1c6b0a64f82a4020b9e78f57, type: 2}
+  m_Material: {fileID: 6200000, guid: d9193025eb4e6a44587f92f12444228e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 64
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -127,7 +127,7 @@ CircleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: a342df4e1c6b0a64f82a4020b9e78f57, type: 2}
+  m_Material: {fileID: 6200000, guid: d9193025eb4e6a44587f92f12444228e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -151,8 +151,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.026501965, y: 0.0045691454}
-  m_Radius: 0.22222865
+  m_Offset: {x: 0.027471572, y: -0.019678071}
+  m_Radius: 0.18343303
 --- !u!114 &-8270123052804812254
 MonoBehaviour:
   m_ObjectHideFlags: 0
