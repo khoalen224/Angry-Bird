@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5796696182711021959}
   - component: {fileID: 5487031223303762030}
-  - component: {fileID: 4057381175466012265}
-  - component: {fileID: 7321415789234444766}
+  - component: {fileID: 966004422876537515}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -89,50 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &4057381175466012265
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171714841480095335}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -1.7555962, y: 1.0141561}
-  - {x: 1.7415079, y: 1.0377412}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!61 &7321415789234444766
+--- !u!61 &966004422876537515
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +122,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -3.2631416, y: 0}
+  m_Offset: {x: 3.5229993, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.040013593, y: 0.020000001, z: 0.010003398, w: 0.010000001}
     pivot: {x: 0.5, y: 0.5}
@@ -176,7 +132,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 69.9204, y: 2.08}
+  m_Size: {x: 28.723053, y: 2.08}
   m_EdgeRadius: 0
 --- !u!1 &5120249792403207255
 GameObject:
