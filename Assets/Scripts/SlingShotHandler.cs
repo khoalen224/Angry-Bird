@@ -29,7 +29,9 @@ public class SlingShotHandler : MonoBehaviour
 
     [Header("Bird")]
     [SerializeField] private AngryBird angryBirdPrefab;
-    [SerializeField] private float angryBirdOffset = 0.06f; 
+    [SerializeField] private float angryBirdOffset = 0.06f;
+
+    [SerializeField] private CameraManager cameraManager;
 
     private Vector2 slingShotLinesPosition;
     private Vector2 direction;
@@ -56,6 +58,11 @@ public class SlingShotHandler : MonoBehaviour
         {
            //this
            clickWithinThisArea = true;
+            if (birdOnSlingShot)
+            {
+                cameraManager.SwitchToFollowCam(spawnedAngryBird.transform);
+            }
+
         }
         if (Mouse.current.leftButton.isPressed && clickWithinThisArea && birdOnSlingShot)
         {
@@ -76,7 +83,7 @@ public class SlingShotHandler : MonoBehaviour
 
                 if (GameManager.Instance.HasEnoughBirds())
                 {
-                    StartCoroutine(SpawingAngryBirdAfter());
+                    StartCoroutine(SpawingAngryBirdAfter()); 
                 }
             }
         }
@@ -104,6 +111,7 @@ public class SlingShotHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(birdLaunchDelay);
         SpawnAngryBird();
+        cameraManager.SwitchToIdleCam();
 
     }
 

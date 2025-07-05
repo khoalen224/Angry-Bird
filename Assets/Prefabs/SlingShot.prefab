@@ -94,7 +94,49 @@ MonoBehaviour:
   maxDistance: 2.5
   shotForce: 10
   birdLaunchDelay: 2
-  elasticDivider: 1.2
+  elasticDivider: 2
+  elasticCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 17.052696
+      outSlope: 17.052696
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.059467934
+      value: 1.0140886
+      inSlope: -4.904302
+      outSlope: -4.904302
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.06023756
+    - serializedVersion: 3
+      time: 0.38898933
+      value: 1.0338514
+      inSlope: -0.2573437
+      outSlope: -0.2573437
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.27033463
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.055402283
+      outSlope: -0.055402283
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   slingShotArea: {fileID: 2423133048696045567}
   angryBirdPrefab: {fileID: -8270123052804812254, guid: 7540dde7ca5d86c48a83f1ba46ed237a, type: 3}
   angryBirdOffset: 0.06
