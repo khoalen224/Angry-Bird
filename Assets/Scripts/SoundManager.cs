@@ -12,7 +12,7 @@ public class SoundManager : MonoBehaviour
             instance = this;
         }
     }
-    private void PlayClip(AudioClip clip, AudioSource source)
+    public void PlayClip(AudioClip clip, AudioSource source)
     {
         source.clip = clip;
         source.Play();

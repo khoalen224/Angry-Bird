@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem; // Ensure you have the Input System package installed
+using UnityEngine.InputSystem; 
 using DG.Tweening;
 
 public class SlingShotHandler : MonoBehaviour
