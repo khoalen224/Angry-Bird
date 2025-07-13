@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
     private List<Baddie> baddiesList = new List<Baddie>();
     [SerializeField] private GameObject restartSreenObject;
     [SerializeField] private SlingShotHandler slingShotHandler;
-
+    [SerializeField] private Image nextLevelImg;
     private void Awake()
     {
         if (Instance == null)
@@ -38,6 +39,10 @@ public class GameManager : MonoBehaviour
         foreach (Baddie baddie in baddies)
         {
             baddiesList.Add(baddie);
+        }
+        if (nextLevelImg == null)
+        {
+            nextLevelImg = FindAnyObjectByType<Image>(); // You may need to be more specific
         }
     }
     public void UseBird()
@@ -93,11 +98,23 @@ public class GameManager : MonoBehaviour
     {
         restartSreenObject.SetActive(true);
         slingShotHandler.enabled = false;
+
+
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int maxLevels = SceneManager.sceneCountInBuildSettings;
+        if (currentSceneIndex +1 < maxLevels)
+        {
+            nextLevelImg.enabled = true;
+        }
     }
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
+    }
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     #endregion
 }
