@@ -21,12 +21,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject restartSreenObject;
     [SerializeField] private SlingShotHandler slingShotHandler;
     [SerializeField] private Image nextLevelImg;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded; // Subscribe to scene load event
         }
         else
         {
@@ -41,10 +43,22 @@ public class GameManager : MonoBehaviour
             baddiesList.Add(baddie);
         }
         if (nextLevelImg == null)
-        {
-            nextLevelImg = FindAnyObjectByType<Image>(); // You may need to be more specific
-        }
+            nextLevelImg = FindAnyObjectByType<Image>();
+
+        if (nextLevelImg != null)
+            nextLevelImg.enabled = false;   
     }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // No need to search if assigned in Inspector
+    }
+
     public void UseBird()
     {
         usedBirds++;
@@ -82,7 +96,7 @@ public class GameManager : MonoBehaviour
 
     public void RemoveBadddie(Baddie baddie)
     {
-         baddiesList.Remove(baddie);
+        baddiesList.Remove(baddie);
         CheckForAllBaddiesDestroyed();
     }
 
@@ -96,21 +110,37 @@ public class GameManager : MonoBehaviour
     #region win/lose conditions
     private void WinGame()
     {
-        restartSreenObject.SetActive(true);
-        slingShotHandler.enabled = false;
+        if (restartSreenObject != null)
+        {
+            restartSreenObject.SetActive(true);
+        }
+        else
+        {
+            UnityEngine.Debug.LogWarning("Restart screen object is missing or destroyed.");
+        }
 
+        if (slingShotHandler != null)
+        {
+            slingShotHandler.enabled = false;
+        }
 
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int maxLevels = SceneManager.sceneCountInBuildSettings;
-        if (currentSceneIndex +1 < maxLevels)
+        if (currentSceneIndex + 1 < maxLevels)
         {
-            nextLevelImg.enabled = true;
+            if (nextLevelImg != null)
+            {
+                nextLevelImg.enabled = true;
+            }
+            // Remove automatic call to NextLevel()
+            // NextLevel() should only be called by a button click
         }
     }
     public void RestartGame()
     {
+        if (restartSreenObject != null)
+            restartSreenObject.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
     }
     public void NextLevel()
     {

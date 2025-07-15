@@ -7,13 +7,20 @@ public class IconHandler : MonoBehaviour
 
     public void UseBird(int birdNumber)
     {
-        for (int i = 0; i < iconImage.Length; i++)
+        int index = birdNumber - 1;
+        if (index < 0 || index >= iconImage.Length || index >= usedColors.Length)
         {
-            if (birdNumber == i + 1) 
-            {
-                iconImage[i].color = usedColors[i];
-                return;
-            }
+            Debug.LogWarning($"IconHandler: birdNumber {birdNumber} is out of range.");
+            return;
+        }
+
+        if (iconImage[index] != null)
+        {
+            iconImage[index].color = usedColors[index];
+        }
+        else
+        {
+            Debug.LogWarning($"IconHandler: iconImage[{index}] is null or destroyed.");
         }
     }
 }

@@ -25,8 +25,16 @@ public class Baddie : MonoBehaviour
     {
         GameManager.Instance.RemoveBadddie(this);
 
-        Instantiate(deathEffectParticles, this.transform.position, Quaternion.identity);
-        AudioSource.PlayClipAtPoint(deathSound, transform.position);
+        if (deathEffectParticles != null)
+            Instantiate(deathEffectParticles, this.transform.position, Quaternion.identity);
+        else
+            UnityEngine.Debug.LogWarning("Baddie: deathEffectParticles is not assigned.");
+
+        if (deathSound != null)
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
+        else
+            UnityEngine.Debug.LogWarning("Baddie: deathSound is not assigned.");
+
         Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
