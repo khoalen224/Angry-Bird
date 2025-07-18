@@ -142,6 +142,7 @@ MonoBehaviour:
   maxHealth: 3
   damageThreshold: 0.2
   deathEffectParticles: {fileID: 8545370365757099066, guid: 57924687d489062439ea2df485fc81ae, type: 3}
+  pointImage: {fileID: 7170364605515914259, guid: 38dfab9eadb9d254b9c79dbb47ebc1f1, type: 3}
   deathSound: {fileID: 8300000, guid: c9f39e15315c5a941877ef41c98e7acd, type: 3}
 --- !u!50 &8041961194250420520
 Rigidbody2D:

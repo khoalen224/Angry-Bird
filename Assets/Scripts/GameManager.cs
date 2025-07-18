@@ -27,8 +27,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded; // Subscribe to scene load event
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -49,15 +48,6 @@ public class GameManager : MonoBehaviour
             nextLevelImg.enabled = false;   
     }
 
-    private void OnDestroy()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        // No need to search if assigned in Inspector
-    }
 
     public void UseBird()
     {

@@ -140,6 +140,9 @@ MonoBehaviour:
   slingShotArea: {fileID: 2423133048696045567}
   angryBirdPrefab: {fileID: -8270123052804812254, guid: 7540dde7ca5d86c48a83f1ba46ed237a, type: 3}
   angryBirdOffset: 0.06
+  cameraManager: {fileID: 0}
+  elasticPulledClip: {fileID: 0}
+  elasticReleasedClip: []
 --- !u!1 &3537065579582657064
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,11 +7,13 @@ public class Baddie : MonoBehaviour
     [SerializeField] private GameObject deathEffectParticles;
     [SerializeField] private GameObject pointImage;
     [SerializeField] private AudioClip deathSound;
+
     private float currentHealth;
 
     private void Awake()
     {
         currentHealth = maxHealth;
+
     }
 
     public void DamageBaddie(float damageAmount)
@@ -22,12 +24,14 @@ public class Baddie : MonoBehaviour
             Die();
         }
     }
+
     public void Die()
     {
         if(pointImage != null)
         {
             GameObject pointImageInstance = Instantiate(pointImage, transform.position, Quaternion.identity);
             Destroy(pointImageInstance, 2f); 
+
         }
         else
         {
