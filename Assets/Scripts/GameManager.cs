@@ -143,5 +143,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void SelectLevel(int levelIndex)
+    {
+        SceneManager.LoadScene(levelIndex+1);
+    }
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(1);
+    }
     #endregion
 }
