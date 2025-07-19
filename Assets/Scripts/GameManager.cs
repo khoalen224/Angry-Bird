@@ -114,6 +114,13 @@ public class GameManager : MonoBehaviour
             slingShotHandler.enabled = false;
         }
 
+        int remainingBirds = maxNumberOfBirds - usedBirds;
+        ScoreManager scoreManager = FindAnyObjectByType<ScoreManager>();
+        if (scoreManager != null)
+        {
+            scoreManager.AddScoreForRemainingBirds(remainingBirds);
+        }
+
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int maxLevels = SceneManager.sceneCountInBuildSettings;
         if (currentSceneIndex + 1 < maxLevels)
