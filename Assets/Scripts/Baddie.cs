@@ -7,12 +7,16 @@ public class Baddie : MonoBehaviour
     [SerializeField] private GameObject deathEffectParticles;
     [SerializeField] private GameObject pointImage;
     [SerializeField] private AudioClip deathSound;
+    [SerializeField] private int scoreValue = 5000;
+
 
     private float currentHealth;
+    private ScoreManager scoreManager;
 
     private void Awake()
     {
         currentHealth = maxHealth;
+        scoreManager = FindAnyObjectByType<ScoreManager>();
 
     }
 
@@ -38,6 +42,8 @@ public class Baddie : MonoBehaviour
             UnityEngine.Debug.LogWarning("Baddie: pointImage is not assigned.");
         }
         GameManager.Instance.RemoveBadddie(this);
+
+        scoreManager.AddScore(scoreValue);
 
         if (deathEffectParticles != null)
             Instantiate(deathEffectParticles, this.transform.position, Quaternion.identity);
