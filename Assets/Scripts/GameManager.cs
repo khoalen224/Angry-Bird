@@ -74,13 +74,13 @@ public class GameManager : MonoBehaviour
     private IEnumerator TimeBeforeLost()
     {
         yield return new WaitForSeconds(timeBeforeLost);
-        if (baddiesList.Count == 0)
+        if (baddiesList.Count !=0)
         {
-            WinGame();
+            RestartGame();
         }
         else
         {
-            RestartGame();
+            WinGame();
         }
     }
 
